@@ -5,37 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+            content-visibility: auto;
+            }
+            
+        }
+    </style>
     <title>DavxDev</title>
 </head>
-<body class="h-screen bg-gray-900 text-white bg-gradient-to-tr from-slate-900 via-zinc-900 to-indigo-900">
-    <header class="h-14 bg-transparent border-b-2 border-gray-900 drop-shadow-md">
+<body class="h-screen text-slate-800">
+    <header class="h-15 bg-transparent shadow drop-shadow-lg py-2">
         <nav class="flex justify-between items-center h-full max-w-7xl mx-auto font-semibold">
-            <p class="text-lg ">Davi Silva</p>
+            <a target="_blank" class="text-2xl font-bold flex gap-1 items-center hover:bg-gray-100/20 p-2 ease-in-out rounded-lg" href="https://github.com/DaviMSilva">
+                <img src="./assets/github-mark.png" class="size-6" alt="" srcset="">
+                <span class="hidden md:flex">
+                    DaviMSilva
+                </span>
+            </a>
             <ul class="flex gap-3">
-                <li>Sobre Mim</li>
-                <li>Formação</li>
-                <li>Skills</li>
+                <li>
+                    <a href="#sobre" class="hover:text-indigo-600 cursor-pointer">
+                        Sobre Mim
+                    </a>
+                </li>
+                <li>
+                    <a href="#formacao" class="hover:text-indigo-600 cursor-pointer">
+                        Formação
+                    </a>
+                </li>
+                <!--
+                    <li>
+                        <a href="#sobre" class="hover:text-indigo-600 cursor-pointer">
+                            Skills
+                        </a>
+                    </li>
+                -->
             </ul>
         </nav>
     </header>
 
-    <section id="sobre" class="max-w-7xl mx-auto my-24">
-        <div class="flex justify-between gap-6">
+    <section id="sobre" class="max-w-7xl mx-auto my-24 px-1">
+        <div class="grid md:grid-cols-2 gap-6">
 
-            <div class="max-w-xl">
-                <p class="text-4xl font-bold">Olá, Sou Davi</p>
-                <p class="font-medium text-indigo-400">WEB DEVELOPER</p>
-                <p class="font-medium text-2xl">
+            <div class="max-w-lg flex flex-col mx-auto md:block">
+                <p class="text-2xl md:text-4xl font-bold text-center md:text-left">Olá, Sou Davi</p>
+                <p class="font-medium text-indigo-600 text-center md:text-left">WEB DEVELOPER</p>
+                <p class="font-medium text-lg md:text-2xl text-center md:text-left mt-5">
                     "Sou uma pessoa apaixonada pelo mundo fascinante da tecnologia, onde tudo é possível. 
                     Desde jovem, sempre tive curiosidade em entender como as coisas funcionam. 
                     Isso me levou a buscar conhecimento na internet e nos jogos, o que despertou meu interesse pela programação. 
                     Agora, poder contribuir para a construção de softwares é minha realização."
                 </p>
             </div>
-            <div class="rounded-full w-fit">
-                <img class="w-3/4 mx-auto rounded-full drop-shadow-lg border border-indigo-400" src="./assets/avatar.jpg" alt="">
+            <div class="w-100">
+                <img class="w-2/4 mx-auto rounded-lg drop-shadow-lg border-2 border-indigo-400" src="./assets/avatar.jpg" alt="">
             </div>
         </div>
+    </section>
+
+    <section id="formacao" class="max-w-7xl mx-auto my-24 px-1">
+        <div class="">
+            <p class="font-medium text-indigo-600 text-center mb-5 text-xl">FORMAÇÃO</p>
+
+            <div class="grid md:grid-cols-2 gap-2">
+                
+                <div class="flex items-center p-3 border rounded-lg">
+                    <div class="size-20 my-auto flex items-center">
+                        <img src="./assets/if-logo.png" alt="Instituto federal" class="w-full">
+                    </div>
+                    <div>
+                        <p class="font-medium text-indigo-600">GRADUAÇÃO</p>
+                        <p class="font-medium">
+                            Bacharelado em Ciências da Computação
+                        </p>
+                        <p class="text-gray-500">Instituto Federal do Ceará</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center p-3 border rounded-lg">
+                    <div class="size-20 my-auto flex items-center">
+                        <img src="./assets/unicv-logo-site.png" alt="Instituto federal" class="w-full">
+                    </div>
+                    <div>
+                        <p class="font-medium text-indigo-600">PÓS-GRADUAÇÃO</p>
+                        <p class="font-medium">
+                            Engenharia de software
+                        </p>
+                        <p class="text-gray-500">Centro Universitário Cidade Verde</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <section id="formacao" class="max-w-7xl mx-auto my-24">
